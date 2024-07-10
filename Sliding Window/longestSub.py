@@ -1,21 +1,18 @@
 def lengthOfLongestSubstring(s):
+    st = set()
+    l = 0
+    res = 0
 
-    l, r = 0, 1
-    tempSet = set()
-    maxL = 0
-    
-    while r < len(s):
-        if s[r] not in tempSet:
-            tempSet.add(s[r])
-            r += 1
-        else:
-            tempSet.remove(s[r])
-            maxL = max(maxL, r-l+1)
-            l = r
-            r += 1
-    return maxL
+    for r in range(len(s)):
+        while s[r] in st:
+            print(s[r])
+            st.remove(s[l])
+            l += 1
+        st.add(s[r])
+        res = max(res, r - l + 1)
+    return res
 
 
 
 
-print(lengthOfLongestSubstring("aab"))
+print(lengthOfLongestSubstring("zxyaaaazxyz"))
