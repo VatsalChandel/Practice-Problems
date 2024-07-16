@@ -9,7 +9,6 @@ def characterReplacement(s: str, k: int):
         else:
             d[s[r]] = 1
         
-        
         while (r-l + 1) - max(d.values()) > k:
             d[s[l]] -= 1
             l += 1
@@ -18,4 +17,4 @@ def characterReplacement(s: str, k: int):
         
     return res
 
-print(characterReplacement("XYYX", 2))
+print(characterReplacement("AAABABB", 1))

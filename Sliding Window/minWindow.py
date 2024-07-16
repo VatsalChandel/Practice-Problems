@@ -34,8 +34,6 @@ def minWindow(s: str, t: str) -> str:
     l, r = res
     return s[l : r + 1]
 
-        
-    
-    
+
 
 print(minWindow(s = "OUZODYXAZV", t = "XYZ"))

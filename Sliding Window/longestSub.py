@@ -15,4 +15,4 @@ def lengthOfLongestSubstring(s):
 
 
 
-print(lengthOfLongestSubstring("zxyaaaazxyz"))
+print(lengthOfLongestSubstring("abbcd"))
