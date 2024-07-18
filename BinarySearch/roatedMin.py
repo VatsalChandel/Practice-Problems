@@ -4,10 +4,6 @@ def findMin(nums):
     r = len(nums) - 1
     
     while l <= r:
-        print()
-        print(nums[l])
-        print(nums[r])
-        
         if nums[l] < nums[r]:
             res = min(res, nums[l])
             break
@@ -15,7 +11,6 @@ def findMin(nums):
         m = (l + r) // 2
         res = min(res, nums[m])
         
-        print(nums[m])
         if nums[m] < nums[r]:
             r = m - 1
         else:
